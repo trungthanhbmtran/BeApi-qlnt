@@ -1,0 +1,16 @@
+hot reload
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+npm install @babel/node -g
+.babelrc
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
+
+npm install --save-dev nodemon
+"scripts": {
+  "server": "babel-node ./app",
+  "dev": "NODE_ENV=development nodemon --exec npm run server"
+}
